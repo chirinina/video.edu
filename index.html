@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu Pro</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2><i class='bx bx-book-open'></i>Acceso</h2>
+                <p>Ingresa tus credenciales para continuar</p>
+            </div>
+            <form id="loginForm">
+                <div style="margin-bottom: 1.5rem; position: relative;">
+                    <input type="text" id="username" placeholder="Usuario" required 
+                           style="width: 80%; padding: 0.5rem; border: 0.9px solid #e2e8f0; border-radius: 0.75rem; transition: border-color 0.3s ease;">
+                    <div style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%); display: flex; flex-direction: column; gap: 15px; padding-left: 30px; padding-right: 35px;">
+                        <a href="https://www.cca.edu.bo" target="_blank">
+                            <img src="https://www.esam.edu.bo/img/logo_cca.png" alt="Logo 1" style="width: 40px; height: 40px;">
+                        </a>
+                        <a href="https://www.unsxx.edu.bo" target="_blank">
+                            <img src="https://esam.edu.bo/img/logo_unsxx.png" alt="Logo 2" style="width: 40px; height: 40px;">
+                        </a>
+                        <a href="https://www.cybercorp.com" target="_blank">
+                            <img src="https://www.esam.edu.bo/img/logo_cybercorp.png" alt="Logo 3" style="width: 40px; height: 40px;">
+                        </a>
+                    </div>
+                </div>
+                <div style="margin-bottom: 2rem; position: relative;">
+                    <input type="password" id="password" placeholder="Contraseña" required 
+                           style="width: 80%; padding: 0.5rem; border: 0.9px solid #e2e8f0; border-radius: 0.75rem; transition: border-color 0.3s ease;">
+                    <i class="fas fa-eye" id="togglePassword" 
+                       style="position: absolute; left: -19px; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 20px; color: black;"></i>
+                </div>
+                <button type="submit" 
+                        style="width: 40%; padding: 0.5rem; background: var(--primary); color: white; border: none; border-radius: 0.75rem; cursor: pointer; font-weight: 600;">
+                    <i class='bx bx-log-in'></i> Ingresar
+                </button>
+                
+            </form>
+        </div>
+    </div>
+
+    <div class="dashboard" id="dashboard">
+        <aside class="sidebar" id="sidebar">
+            <div class="course-header">
+            <div class="logout-container" style="display: flex; justify-content: center; align-items: flex-end; position: fixed; bottom: 10px; width: 100%; padding: 10px;">
+                <button class="logout-btn" id="logoutBtn" 
+                        style="background: none; border: none; cursor: pointer; transition: all 0.3s ease;">
+                    <div style="display: flex; align-items: center; font-size: 20px; font-weight: bold; transition: all 0.3s ease;">
+                        <i class="fas fa-power-off" style="font-size: 30px; color: #007bff; font-weight: 600; transition: all 0.3s ease;"></i>
+                        <span style="margin-left: 10px; color: #007bff; font-size: 18px; display: inline-block; opacity: 0; 
+                                    transition: opacity 0.3s ease;">Cerrar Sesión</span>
+                    </div>
+                </button>
+            </div>
+
+        
+
+            <h2><i class='bx bx-book' style="color: rgb(7, 194, 100);"></i> <span id="courseTitle"></span></h2>
+                <p id="userInfo" style=" margin-top: 0.5rem;"></p>
+            </div>
+            <nav>
+                <ul class="module-list" id="moduleList"></ul>
+            </nav>
+        </aside>
+    
+        <main class="main-content" id="mainContent">
+            <div class="course-title">
+                <h1 id="currentModuleTitle"></h1>
+                <a id="driveLink" class="btn" target="_blank" style="background: none; border: none; padding: 0;">
+                    <div style="display: flex; align-items: center; font-size: 18px; font-weight: bold; cursor: pointer;">
+                        <i class='bx bx-cloud' style="font-size: 30px; color: #ffffff; margin-left: 10px; transition: all 0.3s ease;"></i>
+                        <span style="margin-left: 8px; display: none; transition: all 0.3s ease;">Ver Carpeta</span>
+                    </div>
+                </a>
+            </div>
+            <div class="video-grid" id="videoGrid"></div>
+        </main>
+    
+        <!-- Botón de menú para móviles -->
+        <button id="menuBtn" class="menu-btn">
+            <i class='bx bx-menu'></i>
+        </button>
+    </div>
+  <script src="ligc.js"></script>
+</body>
+</html>
