@@ -127,10 +127,232 @@
                 folder: "https://drive.google.com/drive/folders/1F9tA6f2wpH_h8cTWY0qrCVXXBhzcmFeh",
                 modules: [
                     {
-                        name: "Módulo 0: Introducción a la IA",
+                        name: "Módulo 0: Introducción",
+                        videos: [
+                            {
+                                title: "Clase 1: Introduccion IA",
+                                duration: "18-02-2025",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 2: Uso de Drive",
+                                duration: "25-02-2025",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 3: Uso de mooddle",
+                                duration: "02-03-2025",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            }
+                        ]
+                    },
+                    {
+                        name: "Módulo 1",
                         videos: [
                             {
                                 title: "Clase 1: Conceptos Básicos",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 2",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 3",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 4",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 5",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            }
+                        ]
+                    },
+                    {
+                        name: "Módulo 2",
+                        videos: [
+                            {
+                                title: "Clase 1: Conceptos Básicos",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 2",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 3",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 4",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 5",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            }
+                        ]
+                    },
+                    {
+                        name: "Módulo 3",
+                        videos: [
+                            {
+                                title: "Clase 1: Conceptos Básicos",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 2",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 3",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 4",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 5",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            }
+                        ]
+                    },
+                    {
+                        name: "Módulo 4",
+                        videos: [
+                            {
+                                title: "Clase 1: Conceptos Básicos",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 2",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 3",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 4",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 5",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            }
+                        ]
+                    },
+                    {
+                        name: "Módulo 5",
+                        videos: [
+                            {
+                                title: "Clase 1: Conceptos Básicos",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 2",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 3",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 4",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 5",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            }
+                        ]
+                    },
+                    {
+                        name: "Módulo 6",
+                        videos: [
+                            {
+                                title: "Clase 1: Conceptos Básicos",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 2",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 3",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 4",
+                                duration: "18:00",
+                                url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
+                                icon: 'bx bx-brain'
+                            },
+                            {
+                                title: "Clase 5",
                                 duration: "18:00",
                                 url: "https://drive.google.com/file/d/1vp43J7M1GzkUHtjG6dZIAO6lI-Pju5km/view",
                                 icon: 'bx bx-brain'
@@ -174,7 +396,7 @@
             clearTimeout(this.inactivityTimer);
             this.inactivityTimer = setTimeout(() => {
                 this.logout();
-                alert('Su sesión ha expirado por inactividad');
+                alert('');
             }, 900000); // 15 minutos
         }
 
@@ -265,7 +487,7 @@
                     <div class="video-info">
                         <h3>${video.title}</h3>
                         <div class="video-meta">
-                            <span style="display: flex; align-items: center; gap: 0.5rem; color: #64748b;">
+                            <span style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent);">
                                 <i class='bx bx-time'></i> ${video.duration}
                             </span>
                             <div style="display: flex; gap: 0.5rem;">
@@ -274,9 +496,9 @@
                                     <i class='bx bx-play'></i> Ver
                                 </button>
                                 <button class="btn-icon" 
-                                        onclick="window.open('${video.url}', '_blank', 'width=800,height=600')" 
+                                        onclick="window.open('${video.url}', '_blank', 'width=600,height=400')" 
                                         style="background: none; border: none;">
-                                    <i class='bx bx-expand' style="font-size: 30px; font-weight: bold; color: green;"></i>
+                                    <i class='bx bx-expand' style="font-size: 30px; font-weight: bold; color: #ff8507;"></i>
                                 </button>
                             </div>
                         </div>
