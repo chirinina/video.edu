@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edu Pro</title>
+    <title>EcaPro</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
 <body>
     <div class="auth-container">
         <div class="auth-card">
             <div class="auth-header">
-                <h2><i class='bx bx-book-open'></i>Acceso</h2>
+                <div style="display: flex; justify-content: flex-end; align-items: center; width: 100%;">
+                    <h2><i class=''></i>Login</h2>
+                  </div>                  
                 <p>Ingresa tus credenciales para continuar</p>
             </div>
             <form id="loginForm">
                 <div style="margin-bottom: 1.5rem; position: relative;">
                     <input type="text" id="username" placeholder="Usuario" required 
-                           style="width: 70%; padding: 0.5rem; border: 0.9px solid #e2e8f0; border-radius: 0.75rem; transition: border-color 0.3s ease;">
+                           style="width: 70%; padding: 0.5rem; border: 0.9px solid #e2e8f0; border-radius: 0.75rem; transition: border-color 0.3s ease; padding-left: 35px;">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="User Icon" 
+                         style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px;">
                     <div style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%); display: flex; flex-direction: column; gap: 15px; padding-left: 30px; padding-right: 35px;">
                         <a href="https://www.cca.edu.bo" target="_blank">
                             <img src="https://www.esam.edu.bo/img/logo_cca.png" alt="Logo 1" style="width: 40px; height: 40px;">
@@ -33,26 +36,24 @@
                     </div>
                 </div>
                 <div style="margin-bottom: 2rem; position: relative; display: flex; align-items: center;">
-                    <i class="fas fa-eye" id="togglePassword" 
-                       style="position: absolute; left: 10px; cursor: pointer; font-size: 14px; color: black;"></i>
                     <input type="password" id="password" placeholder="Contraseña" required 
-                           style="width: 70%; padding: 0.5rem; border: 0.9px solid #ccc; border-radius: 0.75rem; transition: border-color 0.3s ease; padding-left: 2rem;">
+                        style="width: 70%; padding: 0.5rem; border: 0.9px solid #ccc; border-radius: 0.75rem; transition: border-color 0.3s ease; padding-left: 35px;">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt="Password Icon" 
+                        style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px;">
+                    <i class="fas fa-eye" id="togglePassword" 
+                       style="position: absolute; right: 122px; cursor: pointer; font-size: 12px; color: black;"></i>
                 </div>
                 <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; font-size: 14px;">
                     <input type="checkbox" id="rememberMe" style="cursor: pointer;">
                     <label for="rememberMe" style="cursor: pointer; color: rgb(73, 73, 73);">Recordarme</label>
                 </div>
-                
-                
                 <button type="submit" 
                         style="width: 40%; padding: 0.5rem; background: var(--primary); color: white; border: none; border-radius: 0.75rem; cursor: pointer; font-weight: 600;">
                     <i class='bx bx-log-in'></i> Ingresar
                 </button>
-                
             </form>
         </div>
     </div>
-
     <div class="dashboard" id="dashboard">
         <aside class="sidebar" id="sidebar">
             <div class="course-header">
@@ -66,9 +67,6 @@
                     </div>
                 </button>
             </div>
-
-        
-
             <h2><i class='bx bx-book' style="color: rgb(7, 194, 100);"></i> <span id="courseTitle"></span></h2>
                 <p id="userInfo" style=" margin-top: 0.5rem;"></p>
             </div>
@@ -76,20 +74,17 @@
                 <ul class="module-list" id="moduleList"></ul>
             </nav>
         </aside>
-    
         <main class="main-content" id="mainContent">
             <div class="course-title">
                 <h1 id="currentModuleTitle"></h1>
                 <a id="driveLink" class="btn" target="_blank" style="background: none; border: none; padding: 0;">
                     <div style="display: flex; align-items: center; font-size: 18px; font-weight: bold; cursor: pointer;">
-                        <i class='bx bx-cloud' style="font-size: 30px; color: #ffffff; margin-left: 10px; transition: all 0.3s ease;"></i>
-                        <span style="margin-left: 8px; display: none; transition: all 0.3s ease;">Ver Carpeta</span>
+                        <i class='bx bx-cloud' style="font-size: 30px; background: var(--background); margin-left: 10px; transition: all 0.3s ease;"></i>
                     </div>
                 </a>
             </div>
             <div class="video-grid" id="videoGrid"></div>
         </main>
-    
         <!-- Botón de menú para móviles -->
         <button id="menuBtn" class="menu-btn">
             <i class='bx bx-menu'></i>
@@ -126,9 +121,7 @@
         passwordField.addEventListener("input", saveData);
         rememberMeCheckbox.addEventListener("change", saveData);
     });
-</script>                
 
-<script>
     document.getElementById("togglePassword").addEventListener("click", function () {
         let passwordInput = document.getElementById("password");
         if (passwordInput.type === "password") {
