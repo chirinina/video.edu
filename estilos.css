@@ -1,7 +1,7 @@
       :root {
             --primary: #1100ff;
             --primary-hover: #f1f1f1;
-            --accent: #000302;
+            --accent: #0b86dd;
             --background: #ffffff;
             --text: #1F2937;
             --text-light: #6B7280;
@@ -463,4 +463,3 @@
                 left: 0;
             }
         }
-
