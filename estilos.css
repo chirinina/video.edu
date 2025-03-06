@@ -1,22 +1,25 @@
       :root {
             --primary: #1100ff;
             --primary-hover: #f1f1f1;
-            --accent: #10B981;
+            --accent: #000302;
             --background: #ffffff;
             --text: #1F2937;
             --text-light: #6B7280;
             --card-bg: rgba(255, 255, 255, 0.95);
             --border: #E5E7EB;
-            --gradient: linear-gradient(135deg, #3618bb 0%, #3618bb 100%);
+            --gradient: linear-gradient(135deg, #1909fc 7%, #01fa7d 100%);
         }
     
         @media (prefers-color-scheme: dark) {
             :root {
                 --background: #111827;
                 --text: #F9FAFB;
+                --accent: #0ca170;
                 --text-light: #9CA3AF;
                 --card-bg: rgba(17, 24, 39, 0.95);
-                --border: #374151;
+                --border: #0d0e6d;
+                --gradient: linear-gradient(135deg, #3618bb 0%, #3618bb 100%);
+
             }
         }
     
@@ -60,33 +63,38 @@
             animation: wave 15s ease infinite;
         }
         .auth-card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2.5rem;
-    border-radius: 9.5rem 1.5rem 2.0rem 2.0rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    width: 90%;
-    max-width: 450px;
-    position: relative;
-    z-index: 1;
-    transition: transform 0.3s ease;
-    
-    /* Borde solo en la parte superior */
-    border-top: 5px solid #0611e9;
-
-    /* Animación */
-    animation: slide-in 9.8s ease-out;
-
-    /* Degradado de máscara: de opaco a transparente en la parte inferior */
-    -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 98%);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 9.5rem 1.5rem 2.0rem 2.0rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 90%;
+            max-width: 450px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+            border-top: 5px solid #0611e9;
+            animation: slide-in 9.8s ease-out;
+            -webkit-mask-image: linear-gradient(to bottom, black 72%, transparent 98%);
             mask-image: linear-gradient(to bottom, black 72%, transparent 98%);
-}
-
-    
+        }
         .auth-header {
             text-align: center;
             margin-bottom: 2.5rem;
         }
-    
+        .course-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(0,0,0,0.5);
+            color: #21e928;
+            padding: 0.5rem 1.25rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
         .auth-header h2 {
             font-size: 1.875rem;
             background: var(--gradient);
@@ -177,7 +185,6 @@
             grid-template-columns: 300px 1fr;
             min-height: 100dvh;
         }
-        /* Estilos de la sidebar */
         .sidebar {
             background: var(--card-bg);
             padding: 2rem;
@@ -188,25 +195,19 @@
             height: 100dvh;
             display: flex;
             flex-direction: column;
-            
-            /* Inicialmente fuera de la pantalla */
             transform: translateX(-100%); 
             opacity: 0;
             transition: transform 0.5s ease-out, opacity 0.5s ease-out;
         }
-
-        /* Clase para activar la animación de entrada */
         .sidebar.show {
-            transform: translateX(0); /* Mueve la sidebar a la posición visible */
-            opacity: 1; /* Hace que la sidebar sea visible */
+            transform: translateX(0);
+            opacity: 1;
         }
-
         .course-header {
             margin-bottom: 2rem;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid var(--border);
         }
-    
         .course-header h2 {
             font-size: 1.375rem;
             margin-bottom: 0.70rem;
@@ -214,7 +215,6 @@
             align-items: center;
             gap: 0.75rem;
         }
-    
         .user-info {
             display: flex;
             align-items: center;
@@ -240,20 +240,20 @@
             overflow-y: auto;
         }
         .module-item {
-            padding: 0.75rem; /* Reducir el padding */
-            border-radius: 0.75rem; /* Reducir el border-radius */
+            padding: 0.75rem;
+            border-radius: 0.75rem;
             cursor: pointer;
             transition: all 0.3s ease;
             align-items: center;
-            gap: 0.75rem; /* Reducir el espacio entre elementos */
-            margin-bottom: 0.5rem; /* Reducir el margen inferior */
-            background: rgba(124, 58, 237, 0.05);
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+            background: rgba(3, 0, 0, 0.05);
             border: 1px solid transparent;
-            font-size: 0.875rem; /* Reducir el tamaño de la fuente */
+            font-size: 0.875rem;
         }
         
         .module-item:hover {
-            background: rgba(124, 58, 237, 0.1);
+            background: rgba(0, 0, 0, 0.1);
             border-color: var(--primary);
         }
         
@@ -262,18 +262,18 @@
             color: white;
         }
         
-        @media (max-width: 768px) { /* Adaptar para pantallas pequeñas */
+        @media (max-width: 768px) { 
             .module-item {
-                padding: 0.5rem; /* Menor padding en pantallas pequeñas */
-                font-size: 0.75rem; /* Reducir el tamaño de la fuente en pantallas pequeñas */
-                gap: 0.5rem; /* Reducir el espacio entre elementos en pantallas pequeñas */
+                padding: 0.5rem;
+                font-size: 0.75rem; 
+                gap: 0.5rem; 
             }
         }
         
-        @media (max-width: 480px) { /* Adaptar aún más para móviles */
+        @media (max-width: 480px) { 
             .module-item {
-                padding: 0.25rem; /* Aún menor padding en pantallas pequeñas */
-                font-size: 0.75rem; /* Mantener el tamaño de la fuente pequeño */
+                padding: 0.25rem; 
+                font-size: 0.75rem; 
             }
         }
         
@@ -288,20 +288,17 @@
             align-items: center;
             margin-bottom: 3rem;
         }
-    
         .course-title h1 {
             font-size: 2rem;
-            background:whitesmoke;
+            background:var(--text);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    
         .video-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
         }
-    
         .video-card {
             background: var(--card-bg);
             border-radius: 1.5rem;
@@ -310,12 +307,10 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             border: 0px solid var(--border);
         }
-    
         .video-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
-    
         .video-thumbnail {
             position: relative;
             height: 120px;
@@ -324,24 +319,20 @@
             justify-content: center;
             align-items: center;
         }
-    
         .video-thumbnail i {
             font-size: 3.5rem;
             color: white;
             opacity: 0.8;
         }
-    
         .video-info {
             padding: 1.5rem;
         }
-    
         .video-meta {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 1.5rem;
         }
-    
         .badge {
             padding: 0.375rem 0.75rem;
             border-radius: 0.75rem;
@@ -349,7 +340,6 @@
             color: var(--accent);
             font-size: 0.875rem;
         }
-    
         .mobile-menu {
             display: none;
             position: fixed;
@@ -457,20 +447,20 @@
             cursor: pointer;
             border-radius: 8px;
         }
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+            .sidebar {
+                position: fixed;
+                left: -100%;
+                width: 250px;
+                height: 100%;
+                /* background: #222222; */
+                transition: left 0.3s ease;
+            }
+            .sidebar.active {
+                left: 0;
+            }
+        }
 
-    @media (max-width: 768px) {
-        .menu-btn {
-            display: block;
-        }
-        .sidebar {
-            position: fixed;
-            left: -100%;
-            width: 250px;
-            height: 100%;
-            /* background: #222222; */
-            transition: left 0.3s ease;
-        }
-        .sidebar.active {
-            left: 0;
-        }
-    }
