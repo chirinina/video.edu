@@ -456,7 +456,7 @@
             container.innerHTML = this.currentCourse.modules
                 .map((module, index) => `
                     <li class="module-item" data-module="${index}">
-                        <i class='bx bx-video' style="color: #00a5e7;"></i>
+                        <i class='bx bx-video' style="color: #08b760;"></i>
 
                         ${module.name}
                     </li>
