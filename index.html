@@ -19,7 +19,7 @@
             <form id="loginForm">
                 <div style="margin-bottom: 1.5rem; position: relative;">
                     <input type="text" id="username" placeholder="Usuario" required 
-                           style="width: 80%; padding: 0.5rem; border: 0.9px solid #e2e8f0; border-radius: 0.75rem; transition: border-color 0.3s ease;">
+                           style="width: 70%; padding: 0.5rem; border: 0.9px solid #e2e8f0; border-radius: 0.75rem; transition: border-color 0.3s ease;">
                     <div style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%); display: flex; flex-direction: column; gap: 15px; padding-left: 30px; padding-right: 35px;">
                         <a href="https://www.cca.edu.bo" target="_blank">
                             <img src="https://www.esam.edu.bo/img/logo_cca.png" alt="Logo 1" style="width: 40px; height: 40px;">
@@ -32,12 +32,18 @@
                         </a>
                     </div>
                 </div>
-                <div style="margin-bottom: 2rem; position: relative;">
-                    <input type="password" id="password" placeholder="Contraseña" required 
-                           style="width: 80%; padding: 0.5rem; border: 0.9px solid #e2e8f0; border-radius: 0.75rem; transition: border-color 0.3s ease;">
+                <div style="margin-bottom: 2rem; position: relative; display: flex; align-items: center;">
                     <i class="fas fa-eye" id="togglePassword" 
-                       style="position: absolute; left: -19px; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 20px; color: black;"></i>
+                       style="position: absolute; left: 10px; cursor: pointer; font-size: 14px; color: black;"></i>
+                    <input type="password" id="password" placeholder="Contraseña" required 
+                           style="width: 70%; padding: 0.5rem; border: 0.9px solid #ccc; border-radius: 0.75rem; transition: border-color 0.3s ease; padding-left: 2rem;">
                 </div>
+                <div style="margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; font-size: 14px;">
+                    <input type="checkbox" id="rememberMe" style="cursor: pointer;">
+                    <label for="rememberMe" style="cursor: pointer; color: rgb(73, 73, 73);">Recordarme</label>
+                </div>
+                
+                
                 <button type="submit" 
                         style="width: 40%; padding: 0.5rem; background: var(--primary); color: white; border: none; border-radius: 0.75rem; cursor: pointer; font-weight: 600;">
                     <i class='bx bx-log-in'></i> Ingresar
@@ -90,5 +96,49 @@
         </button>
     </div>
   <script src="ligc.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const usernameField = document.getElementById("username");
+        const passwordField = document.getElementById("password");
+        const rememberMeCheckbox = document.getElementById("rememberMe");
+
+        // Cargar datos guardados y autocompletar si está activado "Recordarme"
+        if (localStorage.getItem("rememberMe") === "true") {
+            usernameField.value = localStorage.getItem("savedUsername") || "";
+            passwordField.value = localStorage.getItem("savedPassword") || "";
+            rememberMeCheckbox.checked = true;
+        }
+
+        // Guardar datos al cambiar cualquier campo
+        function saveData() {
+            if (rememberMeCheckbox.checked) {
+                localStorage.setItem("savedUsername", usernameField.value);
+                localStorage.setItem("savedPassword", passwordField.value);
+                localStorage.setItem("rememberMe", "true");
+            } else {
+                localStorage.removeItem("savedUsername");
+                localStorage.removeItem("savedPassword");
+                localStorage.removeItem("rememberMe");
+            }
+        }
+
+        usernameField.addEventListener("input", saveData);
+        passwordField.addEventListener("input", saveData);
+        rememberMeCheckbox.addEventListener("change", saveData);
+    });
+</script>                
+
+<script>
+    document.getElementById("togglePassword").addEventListener("click", function () {
+        let passwordInput = document.getElementById("password");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            this.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            this.classList.replace("fa-eye-slash", "fa-eye");
+        }
+    });
+</script>
 </body>
 </html>
